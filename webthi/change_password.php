@@ -10,6 +10,9 @@
 <body>
 	<?php
 	session_start();
+	$usk = $_SESSION['username'];
+	$_SESSION['username'] = $usk;
+
 	if ((isset($_POST["reset"])) && ($_POST['us'] != '') && ($_POST['mkc'] != '') && ($_POST['mkm'] != '') && ($_POST['remkm'] != ''))
 	{
 		$us = $_POST['us'];
@@ -65,7 +68,7 @@
             <h3 style="padding-bottom: 10px;">Change password</h3>
 			<div class="form-group">
                 <input type="text" name="us" required>
-				<label for=""><?php if (isset($_SESSION['username'])) echo "".$_SESSION['username'].""?></label>
+				<label for=""><?php if (isset($_SESSION['username'])) echo "".$_SESSION['username']."";?></label>
             </div>
             <div class="form-group">
                 <input type="password" name="mkc" required>

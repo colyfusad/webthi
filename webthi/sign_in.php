@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +39,6 @@
 </body>
 </html>
 <?php
-    session_start();
 	if ((isset($_POST["dangnhap"])) && ($_POST['taikhoan'] != '') && ($_POST['matkhau'] != ''))
 	{
 		$us = $_POST['taikhoan'];

@@ -11,9 +11,7 @@ body {
     font-size: 17px;
 }
 
-#gen{
-    font-size: 20px;
-}
+
 
 .header{
     position: relative;
@@ -44,6 +42,25 @@ h2{
     text-decoration: none;
 }
 	
+input[type="radio"] { 
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+
+input[type="radio"]:checked ~ label:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 4px;
+    content: '';
+    background: blue;
+}
+
 #box{
     display: flex;
     justify-content: center;

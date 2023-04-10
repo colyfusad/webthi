@@ -1,5 +1,7 @@
 <?php
     session_start();
+    $usk = $_SESSION['username'];
+    $_SESSION['username'] = $usk;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,23 +9,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
     <title>Home - GGC</title>
-    <link rel="stylesheet" href="style_index.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div id="container">
         <div class="header">
             <div id="header-top">
-				<a href="index.php">
-					<img src="img/logox.png" alt="Trường Đại Học Quy Nhơn" title="Trường Đại Học Quy Nhơn">
-				</a>
+                <a href="index.php">
+                    <img src="img/logox.png" alt="Trường Đại Học Quy Nhơn" title="logo">
+                </a>
                 <div id="banner">
-                    <div id="para">Ôn tập và thi trắc nghiệm Vật Lí online</div>
+                    <div id="para">Ôn thi trắc nghiệm Vật Lí online</div>
                 </div>
-                <button id="button-hello">
-                    <?php if(isset($_SESSION['username'])) echo "User: ".$_SESSION['username'].""; else echo "-----> User name <-----" ?>
-                </button>
-                
+                <ul id="nav-infor">
+                    <li>
+                        <a href="#">
+                            <button id="button-hello" style="background-color: #B0F1FF; border: 0px;">
+                                <?php if(isset($_SESSION['username'])) echo "User: ".$_SESSION['username'].""; 
+                                else echo "-----> User name <-----" ?>
+                            </button>
+                        </a>
+                        <ul class="subnav-infor">
+                            <?php
+                                if (isset($_SESSION['username'])){
+                            ?>
+                                    <li><a href="personal_information.php">Thông tin cá nhân</a></li>
+                                    <li><a href="change_password.php">Đổi mật khẩu</a></li>
+                            <?php
+                                }
+                                ?>
+                            
+                        </ul>
+                    </li>
+                </ul>
                 <?php
                     if (isset($_SESSION['username'])){
                         unset($_SESSION['username']);
@@ -36,18 +57,19 @@
                     }
                     else{
                         ?>
-                            <a href="sign_in.php"><button id="button-dangxuat" name="xuli">Sign up</button></a>
+                            <a href="sign_in.php"><button id="button-dangxuat" name="xuli">Sign in</button></a>
                 <?php
                     }
                 ?>
+
             </div>
 
             <div id="header-bottom">
-                <ul id="nav">
+                <ul id="nav-header">
                     <li><a href="">Trang chủ</a></li>
                     <li>
                         <a href="">Lớp 10 ▼</a>
-                        <ul class="subnav10">
+                        <ul class="subnavclass10">
                             <li><a href="#">Chương 1: Mở đầu</a></li>
                             <li><a href="#">Chương 2: Động học</a></li>
                             <li><a href="#">Chương 3: Động lực học</a></li>
@@ -59,7 +81,7 @@
                     </li>
                     <li>
                         <a href="">Lớp 11 ▼</a>
-                        <ul class="subnav11">
+                        <ul class="subnavclass11">
                             <li><a href="#">Chương 1: Điện Tích. Điện trường</a></li>
                             <li><a href="#">Chương 2: Dòng điện không Đổi</a></li>
                             <li><a href="#">Chương 3: Dòng điện Trong Các Mội Trường</a></li>
@@ -71,7 +93,7 @@
                     </li>
                     <li>
                         <a href="">Lớp 12 ▼</a>
-                        <ul class="subnav12">
+                        <ul class="subnavclass12">
                             <li><a href="#">Chương 1: Dao Động Cơ</a></li>
                             <li><a href="#">Chương 2: Sóng Cơ và Sóng Âm</a></li>
                             <li><a href="#">Chương 3: Dòng điện xoay chiều</a></li>
@@ -89,7 +111,6 @@
 
             </div>
         </div>
-
         <div class="container-content">
             <div class="breadcrumb">
                 <ul>
@@ -124,13 +145,16 @@
 
             </div>
         </div>
+        
         <footer class="footer-container">
             <div class="footer-left">
                 <h3>Goblins<span> Go </span>Code</h3>
                 <p class="footer-links">
-                    <a href="index.php">Home</a>
+                    <a href="#">Home</a>
                     |
-                    <a href="contact.php">Contact</a>
+                    <a href="#">About</a>
+                    |
+                    <a href="#">Contact</a>
                     |
                     <a href="#">Blog</a>
                 </p>
@@ -165,7 +189,7 @@
                 </div>
                 <div>
                     <i class="fa fa-envelope"></i>
-                    <p><a href="goblinsgocode@gmail.com">Email: goblinsgocode@gmail.com</a></p>
+                    <p><a href="goblinsgocode@gmail.com">goblinsgocode@gmail.com</a></p>
                 </div>
             </div>
         </footer>
