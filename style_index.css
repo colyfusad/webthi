@@ -1,0 +1,424 @@
+/*CSS cho tất cả trng*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    background-color: #F9F9F8;
+}
+
+/*CSS cho đầu trang*/
+.header{
+    position: relative;
+    height: 156px;
+}
+
+/*CSS cho đầu trang ở phần trên*/
+.header #header-top{
+    width: 100%;
+    height: 150px;
+}
+
+/*CSS cho hình ảnh cho dầu trang ở phần trên*/
+#header-top img{
+    position: absolute;
+    width: 77px;
+    height: 77px;
+    top: 11px;
+    left: 236px;
+}
+
+
+/*CSS cho phần tử bao bọc Ôn thi trắc nghiệm Vật Lý online*/
+#header-top #banner{
+    position: absolute;
+    width: 759px;
+    height: 79px;
+    background-color: #B0F1FF;
+    top: 11px;
+    left: 344px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+/*CSS cho chữ Ôn thi trắc nghiệm Vật Lý online*/
+#header-top #banner #para{
+    position: absolute;
+    width: 440px;
+    height: 57px;
+    left: 215px;
+    top: 10px;
+    /*CSS cho phần chữ Ôn thi thi trắc nghiệm trắc nghiệm Vật Lý*/
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 57px;
+    display: flex;
+    align-items: center;
+    text-align: center; 
+    color: #000000;
+    
+}
+
+/*CSS cho phần chung của hai nút button hello và button đăng xuất */
+#header-top #button-hello, #button-dangxuat{
+    position: absolute;
+    height: 22px;
+    top: 68px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 0px;
+    border-radius: 8px;
+}
+
+/*CSS cho phần riêng của button hello*/
+#header-top #button-hello{
+    width: 145px;
+    left: 1112px;
+    background-color: #B0F1FF;
+}
+
+/*CSS cho phần riêng button dang xuat */
+#header-top #button-dangxuat{
+    width: 85px;
+    left: 1262px;
+    background: #41DDFF;
+}
+
+/*CSS cho đầu trang ở phần dưới*/
+.header #header-bottom{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 108px;
+    background-color: #FFB681;
+    z-index: 2;
+}
+
+/*CSS cho phần điều hướng */
+#header-bottom #nav{
+    position: absolute;
+    left: 270px;
+}
+
+/*CSS cho các phần tử con của phần điều hướng */
+#header-bottom #nav li{
+    display: inline-block;
+}
+
+/*CSS thẻ a cho phẳn tử con cuối cùng trong của phần điều hướng */ 
+#header-bottom #nav li:last-child a{
+    border-right: none;
+}
+
+/*CSS trực tiếp cho thẻ a là con của li và li là con trực tiếp của nav
+#container .header #header-bottom #nav > li > a{
+
+}
+*/
+
+/*CSS cho thẻ a của các phần tử con trong phần điều hướng */
+#header-bottom #nav li a{
+    display: inline-block;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 50px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+    padding: 0px 18px;
+    border-right: 1px solid #333;
+    margin-left: -4px;
+}
+
+/*CSS hover trực tiếp cho thẻ a là con trực tiếp của nav*/
+/*CSS cho con của phần tử lớp 10, lớp 11, lớp 12*/
+#header-bottom #nav > li:hover > a,
+#nav .subnav10 li:hover,
+#nav .subnav11 li:hover,
+#nav .subnav12 li:hover{
+    background-color: #FFD700;
+}
+
+/*css cho phan tu con thứ 2, thứ 3, thứ 4 của nav*/
+#header-bottom #nav li:nth-child(2), 
+#nav li:nth-child(3), 
+#nav li:nth-child(4){
+    position: relative;
+}
+
+
+#header-bottom #nav li:nth-child(2):hover .subnav10, 
+#header-bottom #nav li:nth-child(3):hover .subnav11,
+#header-bottom #nav li:nth-child(4):hover .subnav12 {
+    display: block;
+}
+
+/*CSS cho phần tử con của nav có chữ lớp 10, lớp 11 và lớp 12*/
+#header-bottom #nav .subnav10, 
+#header-bottom #nav .subnav11,
+#header-bottom #nav .subnav12{
+    display: none;
+    position: absolute;
+    background-color: #FFB681;
+    margin-left: -5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+/*CSS phần chung cho thẻ a là con của lớp 10, lớp 11 và lớp 12*/
+#header-bottom #nav .subnav10 li a,
+#header-bottom #nav .subnav11 li a,
+#header-bottom #nav .subnav12 li a{
+    color: #333;
+    margin-left: -5px;
+    border-right: none;
+    font-size: 12.9px;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+}
+
+/*CSS phần riêng cho thẻ a là con của lớp 10*/
+#header-bottom #nav .subnav10 li a{
+    width: 357.185px;
+}
+
+/*CSS phần riêng cho thẻ a là con của lớp 11*/
+#header-bottom #nav .subnav11 li a{
+    width: 328.185px;
+}
+
+/*CSS phần riêng cho thẻ a là con của lớp 12*/
+#header-bottom #nav .subnav12 li a{
+    width: 307.6px;
+}
+
+
+/*CSS cho container-content*/
+#container .container-content{
+    position: relative;
+    width: 100%;
+    height: 910px;
+    z-index: 1;
+}
+
+/*CSS cho breadcrums */
+.container-content .breadcrumb{
+    position: absolute;
+    left: 17.71%;
+    top: 3.23%;
+    height: 24.14px;
+    width: 317px;
+}
+
+/*CSS cho >> trong breadcrumbs*/
+.container-content .breadcrumb svg{
+    height: 18px;
+    vertical-align: middle;
+}
+
+/*CSS cho phần tử cha của breadcrum */
+.container-content .breadcrumb ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 3px;
+}
+
+/*CSS cho thẻ a */
+.breadcrumb ul li a{ 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/*CSS cho phần chứa nội dung trong container-content*/
+.container-content .box-content{
+    position: absolute;
+    width: 923px;
+    height: 797px;
+    left: 248px;
+    top: 76px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+/*CSS cho phần chân trang*/
+footer {
+    position:fixed;
+    bottom:0;
+}
+
+@media (max-height:800px) {
+    footer {
+        position: static;
+    }
+    header {
+        padding-top: 40px;
+    }
+}
+
+.footer-container {
+    background-color: #2d2a30;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 30px 30px 5px 70px;
+    margin-top: 10px;
+}
+
+/*CSS cho footer bên trái, footer chính giữa và footer bên phải */
+.footer-container .footer-left, .footer-container .footer-center, .footer-container .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*CSS cho footer bên trái*/
+.footer-container .footer-left {
+    width: 30%;
+}
+
+/*CSS cho h3 Goblins Go Code của footer bên trái */
+.footer-container h3 {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+/*CSS cho h3 Go của footer bên trái */
+.footer-container h3 span {
+    color: #11ab7c;
+}
+
+.footer-container .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+}
+
+/*CSS cho các icon facebook, about, contact, blog*/
+.footer-container .footer-icons{
+    margin-left: -1px;
+    margin-top: 25px;
+}
+
+
+/*CSS cho HOME ABOUT CONTACT BLOCK */
+.footer-container .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+/*CSS cho footer chính giữa*/
+.footer-container .footer-center {
+    width: 30%;
+}
+
+.footer-container .footer-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 6px;
+}
+
+/*CSS cho chữ ABOUT TEAM*/
+.footer-container .footer-about span {
+    display: block;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/*CSS cho footer bên phải*/
+.footer-container .footer-right {
+    width: 35%;
+}
+
+.footer-container .footer-right i {
+    background-color: #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+/*CSS cho phần tử google map*/
+.footer-container .footer-right i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+/*CSS cho các thông tin của google map, phone và mail */
+.footer-container .footer-right p {
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 0;
+}
+
+/*CSS cho chữ Quy Nhơn*/
+.footer-container .footer-right p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/*CSS cho mail goblinsgocode@gmail.com của mail*/
+.footer-container .footer-right p a {
+    color: #11ab7c;
+    text-decoration: none;
+    ;
+}
+
+.footer-container .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+}
+
+.footer-container .footer-icons a:hover,
+.footer-links a:hover
+ {
+    background-color: #11ab7c;
+}
+
+@media (max-width: 880px) {
+    .footer-container .footer-left, .footer-container .footer-center, .footer-container .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-container .footer-center i {
+        margin-left: 0;
+    }
+}     
