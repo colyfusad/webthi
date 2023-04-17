@@ -88,7 +88,7 @@
 }
 
 /*CSS cho đầu trang ở phần dưới*/
-.header #header-bottom{
+.header #header-menu{
     position: absolute;
     width: 100%;
     height: 50px;
@@ -98,29 +98,29 @@
 }
 
 /*CSS cho phần điều hướng */
-#header-bottom #nav{
+#header-menu #nav{
     position: absolute;
     left: 270px;
 }
 
 /*CSS cho các phần tử con của phần điều hướng */
-#header-bottom #nav li{
+#header-menu #nav li{
     display: inline-block;
 }
 
 /*CSS thẻ a cho phẳn tử con cuối cùng trong của phần điều hướng */ 
-#header-bottom #nav li:last-child a{
+#header-menu #nav li:last-child a{
     border-right: none;
 }
 
 /*CSS trực tiếp cho thẻ a là con của li và li là con trực tiếp của nav
-#container .header #header-bottom #nav > li > a{
+#container .header #header-menu #nav > li > a{
 
 }
 */
 
 /*CSS cho thẻ a của các phần tử con trong phần điều hướng */
-#header-bottom #nav li a{
+#header-menu #nav li a{
     display: inline-block;
     font-family: 'Inter';
     font-style: normal;
@@ -138,7 +138,7 @@
 
 /*CSS hover trực tiếp cho thẻ a là con trực tiếp của nav*/
 /*CSS cho con của phần tử lớp 10, lớp 11, lớp 12*/
-#header-bottom #nav > li:hover > a,
+#header-menu #nav > li:hover > a,
 #nav .subnav10 li:hover,
 #nav .subnav11 li:hover,
 #nav .subnav12 li:hover{
@@ -146,23 +146,23 @@
 }
 
 /*css cho phan tu con thứ 2, thứ 3, thứ 4 của nav*/
-#header-bottom #nav li:nth-child(2), 
+#header-menu #nav li:nth-child(2), 
 #nav li:nth-child(3), 
 #nav li:nth-child(4){
     position: relative;
 }
 
 
-#header-bottom #nav li:nth-child(2):hover .subnav10, 
-#header-bottom #nav li:nth-child(3):hover .subnav11,
-#header-bottom #nav li:nth-child(4):hover .subnav12 {
+#header-menu #nav li:nth-child(2):hover .subnav10, 
+#header-menu #nav li:nth-child(3):hover .subnav11,
+#header-menu #nav li:nth-child(4):hover .subnav12 {
     display: block;
 }
 
 /*CSS cho phần tử con của nav có chữ lớp 10, lớp 11 và lớp 12*/
-#header-bottom #nav .subnav10, 
-#header-bottom #nav .subnav11,
-#header-bottom #nav .subnav12{
+#header-menu #nav .subnav10, 
+#header-menu #nav .subnav11,
+#header-menu #nav .subnav12{
     display: none;
     position: absolute;
     background-color: #FFB681;
@@ -171,9 +171,9 @@
 }
 
 /*CSS phần chung cho thẻ a là con của lớp 10, lớp 11 và lớp 12*/
-#header-bottom #nav .subnav10 li a,
-#header-bottom #nav .subnav11 li a,
-#header-bottom #nav .subnav12 li a{
+#header-menu #nav .subnav10 li a,
+#header-menu #nav .subnav11 li a,
+#header-menu #nav .subnav12 li a{
     color: #333;
     margin-left: -5px;
     border-right: none;
@@ -184,17 +184,17 @@
 }
 
 /*CSS phần riêng cho thẻ a là con của lớp 10*/
-#header-bottom #nav .subnav10 li a{
+#header-menu #nav .subnav10 li a{
     width: 357.185px;
 }
 
 /*CSS phần riêng cho thẻ a là con của lớp 11*/
-#header-bottom #nav .subnav11 li a{
+#header-menu #nav .subnav11 li a{
     width: 328.185px;
 }
 
 /*CSS phần riêng cho thẻ a là con của lớp 12*/
-#header-bottom #nav .subnav12 li a{
+#header-menu #nav .subnav12 li a{
     width: 307.6px;
 }
 
