@@ -1,0 +1,6 @@
+//File này sẽ xoá khi hoàn thành dự án
+//Nếu thấy thiểu thì cứ chỉnh sửa.
+
+1. Front thì chỉ chú trọng làm giao diện thôi, phần xử lý dữ diệu các thành phần thì cứ nhắc trực tiếp hoặc ghi vào file "components-details.txt".
+  Ví dụ: có 1 <div> Cần hiển thị chữ hoặc gì đó thì cứ để trống (<div id="sample"></div> rồi nhờ back làm.
+2. Chưa nghĩ ra :v
