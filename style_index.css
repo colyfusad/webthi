@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+
 #container{
     background-color: #F9F9F8;
 }
@@ -12,13 +13,16 @@
 /*CSS cho đầu trang*/
 .header{
     position: relative;
-    height: 156px;
+    height: 158px;
+    align-items: center;
 }
 
 /*CSS cho đầu trang ở phần trên*/
 .header #header-top{
-    width: 100%;
+    position: relative;
+    width: 50%;
     height: 150px;
+    transform: translateX(35%);
 }
 
 /*CSS cho hình ảnh cho dầu trang ở phần trên*/
@@ -27,7 +31,6 @@
     width: 77px;
     height: 77px;
     top: 11px;
-    left: 236px;
 }
 
 
@@ -38,7 +41,7 @@
     height: 79px;
     background-color: #B0F1FF;
     top: 11px;
-    left: 344px;
+    left: 108px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
@@ -64,63 +67,104 @@
 }
 
 /*CSS cho phần chung của hai nút button hello và button đăng xuất */
-#header-top #button-hello, #button-dangxuat{
+#header-top #nav-infor, #button-dangxuat{
     position: absolute;
     height: 22px;
     top: 68px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border: 0px;
-    border-radius: 8px;
 }
 
-/*CSS cho phần riêng của button hello*/
-#header-top #button-hello{
+/*CSS cho phần riêng của button infor*/
+#header-top #nav-infor{
     width: 145px;
-    left: 1112px;
+    left: 876px;
     background-color: #B0F1FF;
+    line-height: 22px;
+    z-index: 3;
+}
+
+#header-top #nav-infor, 
+.subnav-infor{
+    background-color: #B0F1FF;
+    list-style-type: none;
+}
+
+#header-top #nav-infor li{
+    position: relative;
+}
+
+#header-top #nav-infor li a{
+    text-decoration: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: black;
+} 
+
+#header-top #nav-infor > li > a{
+    display: inline-block;
+    width: 145px;
+    line-height: 22px;
+    text-align: center;
+}
+ 
+#header-top #nav-infor > li:hover > a,
+#nav-infor .subnav-infor li:hover{
+    background: #41DDFF;
+    opacity: 0.8;
+}
+  
+#header-top #nav-infor li:hover .subnav-infor{
+   display: block;
+}
+  
+#header-top #nav-infor li .subnav-infor{
+   display: none;
+   position: absolute;
+   width: 100%;
+}
+
+#header-top #nav-infor li .subnav-infor li a{
+    margin-left: 14px;
 }
 
 /*CSS cho phần riêng button dang xuat */
 #header-top #button-dangxuat{
     width: 85px;
-    left: 1262px;
+    left: 1026px;
     background: #41DDFF;
+    border: 0px;
 }
 
 /*CSS cho đầu trang ở phần dưới*/
 .header #header-bottom{
-    position: absolute;
+    position: relative;
     width: 100%;
+    min-width: 1349px;
     height: 50px;
-    top: 108px;
+    top: -32px;
     background-color: #FFB681;
     z-index: 2;
 }
 
 /*CSS cho phần điều hướng */
-#header-bottom #nav{
+#header-bottom #nav-header{
     position: absolute;
-    left: 270px;
+    left: 24%;
 }
 
 /*CSS cho các phần tử con của phần điều hướng */
-#header-bottom #nav li{
+#header-bottom #nav-header li{
     display: inline-block;
 }
 
 /*CSS thẻ a cho phẳn tử con cuối cùng trong của phần điều hướng */ 
-#header-bottom #nav li:last-child a{
+#header-bottom #nav-header li:last-child a{
     border-right: none;
 }
 
-/*CSS trực tiếp cho thẻ a là con của li và li là con trực tiếp của nav
-#container .header #header-bottom #nav > li > a{
-
-}
-*/
-
 /*CSS cho thẻ a của các phần tử con trong phần điều hướng */
-#header-bottom #nav li a{
+#header-bottom #nav-header li a{
     display: inline-block;
     font-family: 'Inter';
     font-style: normal;
@@ -138,31 +182,31 @@
 
 /*CSS hover trực tiếp cho thẻ a là con trực tiếp của nav*/
 /*CSS cho con của phần tử lớp 10, lớp 11, lớp 12*/
-#header-bottom #nav > li:hover > a,
-#nav .subnav10 li:hover,
-#nav .subnav11 li:hover,
-#nav .subnav12 li:hover{
+#header-bottom #nav-header > li:hover > a,
+#nav-header .subnavclass10 li:hover,
+#nav-header .subnavclass11 li:hover,
+#nav-header .subnavclass12 li:hover{
     background-color: #FFD700;
 }
 
 /*css cho phan tu con thứ 2, thứ 3, thứ 4 của nav*/
-#header-bottom #nav li:nth-child(2), 
-#nav li:nth-child(3), 
-#nav li:nth-child(4){
+#header-bottom #nav-header li:nth-child(2), 
+#nav-header li:nth-child(3), 
+#nav-header li:nth-child(4){
     position: relative;
 }
 
 
-#header-bottom #nav li:nth-child(2):hover .subnav10, 
-#header-bottom #nav li:nth-child(3):hover .subnav11,
-#header-bottom #nav li:nth-child(4):hover .subnav12 {
+#header-bottom #nav-header li:nth-child(2):hover .subnavclass10, 
+#header-bottom #nav-header li:nth-child(3):hover .subnavclass11,
+#header-bottom #nav-header li:nth-child(4):hover .subnavclass12 {
     display: block;
 }
 
 /*CSS cho phần tử con của nav có chữ lớp 10, lớp 11 và lớp 12*/
-#header-bottom #nav .subnav10, 
-#header-bottom #nav .subnav11,
-#header-bottom #nav .subnav12{
+#header-bottom #nav-header li .subnavclass10, 
+#header-bottom #nav-header li .subnavclass11,
+#header-bottom #nav-header li .subnavclass12{
     display: none;
     position: absolute;
     background-color: #FFB681;
@@ -171,9 +215,9 @@
 }
 
 /*CSS phần chung cho thẻ a là con của lớp 10, lớp 11 và lớp 12*/
-#header-bottom #nav .subnav10 li a,
-#header-bottom #nav .subnav11 li a,
-#header-bottom #nav .subnav12 li a{
+#header-bottom #nav-header .subnavclass10 li a,
+#header-bottom #nav-header .subnavclass11 li a,
+#header-bottom #nav-header .subnavclass12 li a{
     color: #333;
     margin-left: -5px;
     border-right: none;
@@ -184,17 +228,17 @@
 }
 
 /*CSS phần riêng cho thẻ a là con của lớp 10*/
-#header-bottom #nav .subnav10 li a{
+#header-bottom #nav-header .subnavclass10 li a{
     width: 357.185px;
 }
 
 /*CSS phần riêng cho thẻ a là con của lớp 11*/
-#header-bottom #nav .subnav11 li a{
+#header-bottom #nav-header .subnavclass11 li a{
     width: 328.185px;
 }
 
 /*CSS phần riêng cho thẻ a là con của lớp 12*/
-#header-bottom #nav .subnav12 li a{
+#header-bottom #nav-header .subnavclass12 li a{
     width: 307.6px;
 }
 
@@ -203,9 +247,12 @@
 #container .container-content{
     position: relative;
     width: 100%;
-    height: 910px;
+    height: 100%;
+    min-width: 1349px;
+    min-height: 1000px;
     z-index: 1;
 }
+
 
 /*CSS cho breadcrums */
 .container-content .breadcrumb{
@@ -245,20 +292,47 @@
 /*CSS cho phần chứa nội dung trong container-content*/
 .container-content .box-content{
     position: absolute;
-    width: 923px;
-    height: 797px;
-    left: 248px;
-    top: 76px;
+    width: 53.8%;
+    height: 87.58%;
+    top: 10%;
+    transform: translateX(45%);
     background-color: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
 }
 
+.box-content{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    overflow-y: scroll;
+    
+}
+.header-page{
+    font-size: 18px;
+}
+
+.category-page{
+    font-size: 13.5px;
+}
+
+.column-page{
+    font-size: 12px;
+    color: #0000FF;
+}
+
+.paragraph{
+    font-size: 12px;
+}
+
 /*CSS cho phần chân trang*/
 footer {
-    position:fixed;
+    position: -ms-page;
     bottom:0;
 }
+
 
 @media (max-height:800px) {
     footer {
@@ -274,6 +348,7 @@ footer {
     box-sizing: border-box;
     width: 100%;
     text-align: left;
+    min-width: 1349px;
     font: bold 16px sans-serif;
     padding: 30px 30px 5px 70px;
     margin-top: 10px;
@@ -388,7 +463,6 @@ footer {
 .footer-container .footer-right p a {
     color: #11ab7c;
     text-decoration: none;
-    ;
 }
 
 .footer-container .footer-icons a {
@@ -412,7 +486,7 @@ footer {
 }
 
 @media (max-width: 880px) {
-    .footer-container .footer-left, .footer-container .footer-center, .footer-container .footer-right {
+    .footer-container .footer-left, .footer-container .footer-center, .footer-container .footer-right{
         display: block;
         width: 100%;
         margin-bottom: 40px;
@@ -422,3 +496,4 @@ footer {
         margin-left: 0;
     }
 }     
+   
