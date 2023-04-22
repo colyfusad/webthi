@@ -15,9 +15,11 @@
     <div id="container">
         <div class="header">
             <div id="header-top">
-				<a href="index.php">
-					<img src="img/logox.png" alt="Trường Đại Học Quy Nhơn" title="Trường Đại Học Quy Nhơn">
-				</a>
+		 <div id="logo-header">
+                    <a href="index.php">
+		       <img src="img/logox.png" alt="Trường Đại Học Quy Nhơn" title="Trường Đại Học Quy Nhơn">
+		    </a>
+                </div>
                 <div id="banner">
                     <div id="para">Ôn tập và thi trắc nghiệm Vật Lí online</div>
                 </div>
