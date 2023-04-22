@@ -5,9 +5,6 @@
     box-sizing: border-box;
 }
 
-
-
-
 #container{
     background-color: #F9F9F8;
 }
@@ -327,6 +324,7 @@
     border-radius: 20px;
 }
 
+/*CSS cho phần chứa nội dung lý thuyết*/
 .box-content{
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -336,19 +334,24 @@
     overflow-y: scroll;
     
 }
+
+/*CSS cho phần tiêu đề của phần chứa nội dung lý thuyết */
 .header-page{
     font-size: 18px;
 }
 
+/*CSS cho các mục lớn của phần chứa nội dung lý thuyết*/
 .category-page{
     font-size: 13.5px;
 }
 
+/*CSS cho các mục nhỏ của phần chứa nội dung lý thuyết */
 .column-page{
     font-size: 12px;
     color: #0000FF;
 }
 
+/*CSS cho văn bản của phần chứa nội dung lý thuyết */
 .paragraph{
     font-size: 12px;
 }
@@ -369,6 +372,7 @@ footer {
     }
 }
 
+/*CSS cho phần chứa footer-left, footer-center, footer-right*/
 .footer-container {
     background-color: #2d2a30;
     box-sizing: border-box;
