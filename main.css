@@ -1,0 +1,88 @@
+/*CSS cho tất cả */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#firstName, #lastName, #mail, #yourClass{
+    width: 192px; 
+    height: 23px;
+    background-color: #a39393; 
+    border: none; 
+    margin: 13px 0px 13px 18px;
+}
+
+#yourClass{
+    font-size: 20px;
+    text-align: center;
+}
+  
+  .yourClass{
+    font-size: 20px;
+    text-align: center;
+  }
+
+/*CSS cho thành phần chứa label, table, button */
+.container{
+    width: 689px;
+    height: 450px;
+    background-color: #d9d9d9;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 20px;
+}
+
+/*CSS cho bảng chứa các thông tin cần nhập */
+table{
+    padding-top: 30px;
+    text-align: left;
+    transform: translateX(70px);
+
+}    
+
+/*CSS cho phần đè lên nút Nam, Nữ, Khác */
+input[type='radio']:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    position: relative;
+    background-color: #923838;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+/*CSS selection cho nút Nam, Nữ ,Khác */
+input[type='radio']:checked:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 19px;
+    position: relative;
+    background-color: #923838;
+    opacity: 0.7;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+button{
+    width: 122px;
+    height: 44px;
+    background-color: #d63837;
+    border: none;
+    font-size: 20px;
+    display: block;
+    transform: translateY(20px);
+    margin: 0 auto;
+}
